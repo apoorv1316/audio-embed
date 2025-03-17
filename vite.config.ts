@@ -6,6 +6,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  define: {
+    'process.env': {},
+  },
   build: {
     lib: {
       entry: 'src/embed.tsx',
