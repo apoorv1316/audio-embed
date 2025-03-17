@@ -8,6 +8,7 @@ export default defineConfig({
   },
   define: {
     'process.env': {},
+    global: 'window',
   },
   build: {
     lib: {
@@ -21,13 +22,15 @@ export default defineConfig({
         extend: true,
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM'
+          'react-dom': 'ReactDOM',
+          'wavesurfer.js': 'WaveSurfer'
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') return 'embed.css';
           return assetInfo.name;
         }
-      }
+      },
+      external: ['react', 'react-dom']
     },
     outDir: 'dist',
     emptyOutDir: true,
