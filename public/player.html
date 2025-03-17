@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolt Player</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <link rel="stylesheet" href="/embed.css">
+  <style>
+    body { margin: 0; padding: 0; background: transparent; }
+  </style>
+</head>
+<body>
+  <div id="bolt-player"></div>
+  <script src="/embed.iife.js"></script>
+  <script>
+    window.embedBoltPlayer('bolt-player');
+  </script>
+</body>
+</html>
